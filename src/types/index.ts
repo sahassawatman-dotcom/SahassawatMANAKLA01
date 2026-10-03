@@ -7,10 +7,13 @@ export type MealTime = 'มื้อเช้า' | 'มื้อกลางว
 export type NutritionZone = '🟢 Green Zone' | '🟡 Yellow Zone' | '🔴 Red Zone';
 
 export interface UserProfile {
+  name?: string;
   age: number;
   gender: Gender;
   weight: number; // kg
+  targetWeight?: number; // kg
   height: number; // cm
+  waistCm?: number; // cm
   activityFactor: ActivityLevel;
   fitnessGoal: 'weight_loss' | 'maintain' | 'muscle_gain';
 }

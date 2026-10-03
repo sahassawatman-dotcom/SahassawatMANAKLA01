@@ -1,10 +1,13 @@
 import { FoodItem, HeartRateZoneInfo, UserProfile } from '../types';
 
 export const INITIAL_USER_PROFILE: UserProfile = {
+  name: 'ผู้รักสุขภาพ',
   age: 28,
   gender: 'Male',
   weight: 70.0,
+  targetWeight: 65.0,
   height: 170.0,
+  waistCm: 80.0,
   activityFactor: 1.55,
   fitnessGoal: 'weight_loss',
 };

@@ -63,11 +63,14 @@ export function exportToExcel(meals: FoodItem[], profile: UserProfile) {
 
   // User Profile summary sheet
   const profileRows = [
+    { 'รายการ': 'ชื่อผู้ใช้งาน', 'ข้อมูล': profile.name || 'ผู้รักสุขภาพ' },
     { 'รายการ': 'วันที่รายงาน', 'ข้อมูล': new Date().toLocaleDateString('th-TH', { year: 'numeric', month: 'long', day: 'numeric' }) },
     { 'รายการ': 'เพศ', 'ข้อมูล': profile.gender === 'Male' ? 'ชาย' : 'หญิง' },
     { 'รายการ': 'อายุ (ปี)', 'ข้อมูล': `${profile.age} ปี` },
-    { 'รายการ': 'น้ำหนัก (กก.)', 'ข้อมูล': `${profile.weight} กก.` },
+    { 'รายการ': 'น้ำหนักปัจจุบัน (กก.)', 'ข้อมูล': `${profile.weight} กก.` },
+    { 'รายการ': 'น้ำหนักเป้าหมาย (กก.)', 'ข้อมูล': `${profile.targetWeight || profile.weight} กก.` },
     { 'รายการ': 'ส่วนสูง (ซม.)', 'ข้อมูล': `${profile.height} ซม.` },
+    { 'รายการ': 'รอบเอว (ซม.)', 'ข้อมูล': `${profile.waistCm || 80} ซม.` },
     { 'รายการ': 'ดัชนีมวลกาย (BMI)', 'ข้อมูล': `${bmiInfo.bmi} (${bmiInfo.category})` },
     { 'รายการ': 'BMR (พลังงานพื้นฐานขณะพัก)', 'ข้อมูล': `${bmr} kcal` },
     { 'รายการ': 'TDEE (พลังงานที่ใช้ต่อวัน)', 'ข้อมูล': `${tdee} kcal` },
