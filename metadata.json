@@ -1,0 +1,6 @@
+{
+  "name": "Smart Physical Education & Health AI Dashboard",
+  "description": "ระบบติดตามการออกกำลังกาย คำนวณชีพจร HR Zone โภชนาการ วิเคราะห์อาหารด้วย AI และส่งออกรายงาน Excel/CSV พร้อมติดตั้งบนมือถือ",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
